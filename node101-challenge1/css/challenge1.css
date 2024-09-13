@@ -32,6 +32,11 @@
     --bar-chart-bar-width: 50px;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .container-holder {
     background-color: var(--color-main-bg);
     display: flex;
