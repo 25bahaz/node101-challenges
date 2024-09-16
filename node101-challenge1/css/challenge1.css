@@ -2,9 +2,9 @@
 :root {
     --box-width: calc((100vw - (8 * 6px)) / 4);
     --box-height: calc((100vw - (8 * 6px)) / 4);
-    --bold-text-font-size: 5.5em;
-    --header-text-font-size: 2em;
-    --green-text-font-size: 2.8em; 
+    --bold-text-font-size: 80px;
+    --header-text-font-size: 32px;
+    --green-text-font-size: 45px; 
     --border-radius: 10px;
     --box-margin: 6px;
     --box-padding: 10px;
@@ -64,7 +64,10 @@ body {
     align-items: center;
 }
 
-.bottom-boxes-each-box-wrapper{  
+/* .top-boxes-each-box-wrapper {
+} */
+
+.bottom-boxes-each-box-wrapper {  
     width: calc((var(--box-width) + var(--box-margin)) * 2);
     height: calc((var(--box-height) + var(--box-margin)) * 2);
 }
@@ -79,11 +82,11 @@ body {
     text-align: center;
     font-size: var(--bold-text-font-size);
     font-weight: bold;
-    line-height: 0.5;
 }
 
 .top-boxes-each-box-half-bold-text {
     font-size: calc(var(--bold-text-font-size) / 2);
+    vertical-align: super;
 }
 
 .top-boxes-each-box-green-text {
@@ -93,18 +96,6 @@ body {
 
 .top-boxes-each-box-light-text {
     font-weight: lighter;
-}
-
-.wrap-up-text {
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-}
-
-.wrap-up-text-green {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
 }
 
 #top-box-doughnut-chart-label-left, #top-box-doughnut-chart-label-top, #top-box-doughnut-chart-label-bottom {
