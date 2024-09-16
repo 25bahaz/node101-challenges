@@ -7,6 +7,8 @@
 :root {
     --box-width: calc((100vw - (8 * 6px)) / 4);
     --box-height: calc((100vw - (8 * 6px)) / 4);
+    --box-header-height: 43px;
+    --top-box-body-height: calc(var(--box-height) - var(--box-header-height) - 20px);
     --bold-text-font-size: 80px;
     --header-text-font-size: 32px;
     --green-text-font-size: 45px; 
@@ -40,6 +42,8 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
+    width: 100vw;
 }
 
 .box-wrapper {
@@ -67,18 +71,32 @@ body {
     padding: var(--box-padding);
     font-family:'Segoe UI';
     align-items: center;
+    overflow: hidden;
 }
-
-/* .top-boxes-each-box-wrapper {
-} */
 
 .bottom-boxes-each-box-wrapper {  
     width: calc((var(--box-width) + var(--box-margin)) * 2);
     height: calc((var(--box-height) + var(--box-margin)) * 2);
 }
 
+.top-boxes-each-box-header {
+    width: var(--box-width);
+    height: var(--box-header-height);
+    display: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
 
-.top-boxes-each-box-title, .bottom-boxes-each-box-title {
+.top-boxes-each-box-body {
+    width: var(--box-width);
+    min-height: var(--top-box-body-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-boxes-each-box-header-title, .bottom-boxes-each-box-title {
     text-align: left;
     font-size: var(--header-text-font-size);
 }
