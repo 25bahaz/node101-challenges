@@ -7,8 +7,11 @@
 :root {
     --box-width: calc((100vw - (8 * 6px)) / 4);
     --box-height: calc((100vw - (8 * 6px)) / 4);
+    --bottom-box-width: calc((var(--box-width) + var(--box-margin)) * 2);
+    --bottom-box-height: calc((var(--box-height) + var(--box-margin)) * 2);
     --box-header-height: 43px;
     --top-box-body-height: calc(var(--box-height) - var(--box-header-height) - 20px);
+    --bottom-box-body-height: calc(var(--bottom-box-height) - var(--box-header-height) - 20px);; 
     --bold-text-font-size: 80px;
     --header-text-font-size: 32px;
     --green-text-font-size: 45px; 
@@ -87,6 +90,14 @@ body {
     justify-content: center;
 }
 
+.bottom-boxes-each-box-header {
+    width: var(--box-width);
+    height: var(--box-header-height);
+    display: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .top-boxes-each-box-body {
     width: var(--box-width);
     min-height: var(--top-box-body-height);
@@ -94,6 +105,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.bottom-boxes-each-box-body{
+    width: var(--bottom-box-width);
+    min-height: var(--bottom-box-body-height);
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    justify-content: center;
 }
 
 .top-boxes-each-box-header-title, .bottom-boxes-each-box-title {
