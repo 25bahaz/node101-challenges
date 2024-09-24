@@ -55,6 +55,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%
 }
 
 .top-boxes-wrapper, .bottom-boxes-wrapper {
@@ -66,6 +67,7 @@ body {
 }
 
 .top-boxes-each-box-wrapper, .bottom-boxes-each-box-wrapper{
+    position: relative;
     border-radius: var(--border-radius);
     background-color: var(--color-box-bg);
     width: var(--box-width);   
@@ -85,7 +87,7 @@ body {
 @media screen and (max-width: 1230px ) {
     .top-boxes-wrapper {
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .bottom-boxes-wrapper {
@@ -99,7 +101,7 @@ body {
     }
 
     .bottom-boxes-each-box-wrapper {
-        width: 95%; 
+        width: 94%; 
         margin-bottom: 20px;
     }
 }
@@ -218,26 +220,16 @@ body {
     transform: translate(-50%, -50%);
 } 
 
-.bottom-box-circle-chart-x-y-chart-axis-circle-wrapper, .bottom-box-circle-chart-x-y-chart-axis-wrapper {
+.bottom-box-circle-chart-x-y-chart-axis-circle-wrapper {
     width: var(--chart-line-width);
     height: var(--chart-line-width);
-}
-
-.bottom-box-circle-chart-x-y-chart-axis-circle-wrapper {
-    position: absolute;
     position: relative;
     display: flex;
     top: 0;
     left: 0;
     z-index: 10; 
-}
-
-.bottom-box-circle-chart-x-y-chart-axis-wrapper {
-    background-color: transparent;
-    position: relative;
-    border-left: 5px solid var(--chart-color-grey);  
+    border-left: 5px solid var(--chart-color-grey);
     border-bottom: 5px solid var(--chart-color-grey);
-    z-index: 1;
 }
 
 .bottom-box-circle-chart-skeleton-wrapper {
